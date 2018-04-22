@@ -10,7 +10,12 @@ public class NO561ArrayPartitionI {
 		System.out.println(arrayPairSum(nums));
 	}
 
-	//beats 63%
+	/**
+	 * 
+	 *2018年4月22日 下午10:22:27
+	 * beats:63%
+	 * 复杂度：
+	 */
 	public static int arrayPairSum(int[] nums) {
 		Arrays.sort(nums);
 		int sum=0;

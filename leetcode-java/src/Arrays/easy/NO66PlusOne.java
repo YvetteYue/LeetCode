@@ -2,7 +2,12 @@ package Arrays.easy;
 
 public class NO66PlusOne {
 
-	//beats 68.51%
+	/**
+	 * 
+	 *2018年4月22日 下午10:23:27
+	 * beats:68.51%
+	 * 复杂度：
+	 */
 	public int[] plusOne(int[] digits) {
 		int len = digits.length;
 		int tmp = 1;

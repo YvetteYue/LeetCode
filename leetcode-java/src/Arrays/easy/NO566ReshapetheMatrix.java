@@ -15,7 +15,12 @@ public class NO566ReshapetheMatrix {
 		}
 	}
 
-	//beats 64%
+	/**
+	 * 
+	 *2018年4月22日 下午10:22:42
+	 * beats:64%
+	 * 复杂度：
+	 */
 	public static int[][] matrixReshape(int[][] nums, int r, int c) {
 		int x=nums.length;
 		int y=nums[0].length;

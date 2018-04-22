@@ -6,7 +6,12 @@ public class NO643MaximumAverageSubarrayI {
 //	find the contiguous subarray of given length k that has the maximum average value. 
 //	And you need to output the maximum average value.
 
-	//beats 96.87%
+	/**
+	 * 
+	 *2018年4月22日 下午10:23:13
+	 * beats:96.87%
+	 * 复杂度：
+	 */
 	 public double findMaxAverage(int[] nums, int k) {
 	        int sum=0;
 	        for(int i=0;i<k;i++){

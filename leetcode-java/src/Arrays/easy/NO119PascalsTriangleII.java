@@ -8,8 +8,13 @@ public class NO119PascalsTriangleII {
 	// Given an index k, return the kth row of the Pascal's triangle.
 	// could you optimize your algorithm to use only O(k) extra space
 
-	//beats 53%
-	public List<Integer> getRow(int rowIndex) {
+	/**
+	 * 
+	 * 2018年4月22日 下午7:29:04 
+	 * beats:53% 
+	 * 复杂度O(n^2)
+	 */
+	public List<Integer> getRow1(int rowIndex) {
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 0; i <= rowIndex; i++) {
 			list.add(1);
@@ -21,4 +26,6 @@ public class NO119PascalsTriangleII {
 		}
 		return list;
 	}
+
+
 }

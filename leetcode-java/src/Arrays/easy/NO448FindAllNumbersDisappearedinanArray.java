@@ -15,9 +15,11 @@ public class NO448FindAllNumbersDisappearedinanArray {
 		System.out.println(findDisappearedNumbers(nums));
 	}
 
-	//beats 25%
-	/*
+	/**
 	 * 将当前数字对应的数组的数字的数值改成负数，那么第二次迭代是正数的就是有问题的数据
+	 *2018年4月22日 下午10:21:46
+	 * beats:25%
+	 * 复杂度：
 	 */
 	public static List<Integer> findDisappearedNumbers(int[] nums) {
 		List<Integer> list=new ArrayList<>();

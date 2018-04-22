@@ -9,7 +9,12 @@ public class NO169MajorityElement {
 		System.out.println(majorityElement(nums));
 	}
 
-	//beats 79.3%
+	/**
+	 * 
+	 *2018年4月22日 下午10:24:57
+	 * beats:79.3%
+	 * 复杂度：
+	 */
 	public static int majorityElement(int[] nums) {
 		Arrays.sort(nums);
 		int len=nums.length;

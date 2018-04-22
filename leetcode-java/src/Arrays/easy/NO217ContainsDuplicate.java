@@ -9,7 +9,12 @@ public class NO217ContainsDuplicate {
 		System.out.println(containsDuplicate(nums));
 	}
 
-	//beats 99.38%
+	/**
+	 * 
+	 *2018年4月22日 下午10:20:43
+	 * beats: 99.38%
+	 * 复杂度：O(n)
+	 */
 	public static boolean containsDuplicate(int[] nums) {
 		Arrays.sort(nums);
 		for(int i=1;i<nums.length;i++){

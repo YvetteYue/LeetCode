@@ -18,7 +18,12 @@ public class NO695MaxAreaofIsland {
 		System.out.println(maxAreaOfIsland(a));
 	}
 
-	//19%
+	/**
+	 * 
+	 *2018年4月22日 下午10:23:44
+	 * beats:19%
+	 * 复杂度：
+	 */
 	public static int maxAreaOfIsland(int[][] grid) {
 		int max=0;
 		for(int i=0;i<grid.length;i++){

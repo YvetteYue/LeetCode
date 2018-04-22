@@ -17,7 +17,12 @@ public class NO283MoveZeroes {
 		}
 	}
 
-	//beats 17%
+	/**
+	 * 
+	 *2018年4月22日 下午10:21:27
+	 * beats:17%
+	 * 复杂度：
+	 */
 	public static void moveZeroes(int[] nums) {
 		int i = 0, j = 0;
 		int len=nums.length;

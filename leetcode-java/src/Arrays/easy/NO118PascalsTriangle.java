@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NO118PascalsTriangle {
-	// beats 99.87%
+	/**
+	 * 
+	 *2018年4月22日 下午9:38:53
+	 * beats:99.87%
+	 * 复杂度：O(n^2)
+	 */
 	public List<List<Integer>> generate(int numRows) {
 		List<List<Integer>> alllist = new ArrayList<>();
 		for (int i = 0; i < numRows; i++) {

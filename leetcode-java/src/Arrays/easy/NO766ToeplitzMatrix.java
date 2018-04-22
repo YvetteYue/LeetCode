@@ -10,7 +10,12 @@ public class NO766ToeplitzMatrix {
 		System.out.println(isToeplitzMatrix2(matrix));
 	}
 
-	//beats 77%,空间局部性优化
+	/**
+	 * 
+	 *2018年4月22日 下午10:24:24
+	 * beats:77%,空间局部性优化
+	 * 复杂度：
+	 */
 	public static boolean isToeplitzMatrix2(int[][] matrix) {
 		int y=matrix.length;
 		int x=matrix[0].length;
@@ -31,7 +36,12 @@ public class NO766ToeplitzMatrix {
 		return true;
 	}
 
-	//beats 3%
+	/**
+	 * 
+	 *2018年4月22日 下午10:24:34
+	 * beats:3%
+	 * 复杂度：
+	 */
 	public static boolean isToeplitzMatrix1(int[][] matrix) {
 		int y=matrix.length;
 		int x=matrix[0].length;

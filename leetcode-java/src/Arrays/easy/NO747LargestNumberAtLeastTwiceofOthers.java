@@ -2,7 +2,12 @@ package Arrays.easy;
 
 public class NO747LargestNumberAtLeastTwiceofOthers {
 
-	// beats 15.38%
+	/**
+	 * 
+	 *2018年4月22日 下午10:24:07
+	 * beats:15.38%
+	 * 复杂度：
+	 */
 	public int dominantIndex(int[] nums) {
 		int max = 0, index = -1;
 		for (int i = 0; i < nums.length; i++) {

@@ -9,7 +9,12 @@ public class NO485MaxConsecutiveOnes {
 		System.out.println(findMaxConsecutiveOnes(num));
 	}
 
-	//beats 99.7%
+	/**
+	 * 
+	 *2018年4月22日 下午10:22:10
+	 * beats:99.7%
+	 * 复杂度：
+	 */
 	public static int findMaxConsecutiveOnes(int[] nums) {
 		int len=nums.length;
 		int i=0;

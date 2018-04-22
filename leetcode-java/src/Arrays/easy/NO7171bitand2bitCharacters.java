@@ -12,7 +12,12 @@ public class NO7171bitand2bitCharacters {
 		System.out.println(isOneBitCharacter(bits));
 	}
 
-	//beats 95.92%
+	/**
+	 * 
+	 *2018年4月22日 下午10:23:56
+	 * beats:95.92%
+	 * 复杂度：
+	 */
 	public static boolean isOneBitCharacter(int[] bits) {
 		int i = 0;
 		int len = bits.length;
