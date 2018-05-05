@@ -1,4 +1,4 @@
-##1.LinkedList 
+## 1.LinkedList 
 
 ### (1)easy
 | # | Title | Acceptance |
@@ -13,7 +13,7 @@
 |160|Intersection of Two Linked Lists||
 
 ### (2)medium	
-
+|---| ----- | ------------------ |
 |369|Plus One Linked List|
 |817|Linked List Components|
 |725|Split Linked List in Parts|
@@ -27,7 +27,7 @@
 |86|Partition List|
 |92|Reverse Linked List II|
 |142|Linked List Cycle II|
-|82|Remove Duplicates from Sorted List II|
+|82|Remove Duplicates from Sorted List II	|
 |148|Sort List|
 |2|Add Two Numbers|
 |143|Reorder List|
