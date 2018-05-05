@@ -13,8 +13,10 @@
 |160|Intersection of Two Linked Lists||
 
 ### (2)medium	
+
+| # | Title | Acceptance |
 |---| ----- | ------------------ |
-|369|Plus One Linked List|
+|369|Plus One Linked List|1|2|3|
 |817|Linked List Components|
 |725|Split Linked List in Parts|
 |445|Add Two Numbers II|
