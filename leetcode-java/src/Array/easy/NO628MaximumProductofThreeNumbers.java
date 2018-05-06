@@ -1,4 +1,4 @@
-package Arrays.easy;
+package Array.easy;
 
 import java.util.Arrays;
 import java.util.zip.Adler32;

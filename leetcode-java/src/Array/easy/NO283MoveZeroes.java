@@ -1,4 +1,4 @@
-package Arrays.easy;
+package Array.easy;
 
 public class NO283MoveZeroes {
 
