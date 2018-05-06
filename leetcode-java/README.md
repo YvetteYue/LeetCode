@@ -60,7 +60,7 @@
 |217|Contains Duplicate|99.38%|yes|
 |697|Degree of an Array|
 |661|Image Smoother|
-|268|Missing Number|
+|268|Missing Number|26%->100%|yes|
 |628|Maximum Product of Three Numbers|6.34%|
 |746|Min Cost Climbing Stairs|
 |121|Best Time to Buy and Sell Stock|
