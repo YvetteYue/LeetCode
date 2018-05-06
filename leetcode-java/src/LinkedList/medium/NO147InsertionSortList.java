@@ -17,6 +17,12 @@ public class NO147InsertionSortList {
 	}
 
 	//最简单版本
+	/**
+	 * 
+	 *2018年5月6日 下午12:36:33
+	 * beats:33.42%
+	 * 复杂度：
+	 */
 	public static ListNode insertionSortList(ListNode head) {
 		ListNode res=new ListNode(0);
 		ListNode p=res;

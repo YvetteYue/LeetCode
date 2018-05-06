@@ -26,9 +26,15 @@ public class NO445AddTwoNumbersII {
 	}	
 	/*
 	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	/**
 	 * 方法1:用队列，然后相加reverse
-	 * 
-	 * 
+	 *2018年5月6日 下午12:26:26
+	 * beats:34.90%
+	 * 复杂度：
 	 */
 	public static ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
 		Stack<Integer> l1Stack=new Stack<>();
@@ -60,9 +66,9 @@ public class NO445AddTwoNumbersII {
 	
 	/**
 	 * 方法2：先reverse，然后相加
-	 * @param l1
-	 * @param l2
-	 * @return
+	 *2018年5月6日 下午12:25:55
+	 * beats:54.68%
+	 * 复杂度：
 	 */
 	 public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
 		 ListNode l1rev=reverse(l1);

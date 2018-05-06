@@ -23,6 +23,12 @@ public class NO82RemoveDuplicatesfromSortedListII {
 		}
 	}
 
+	/**
+	 * 
+	 *2018年5月6日 下午12:40:32
+	 * beats:51.16%
+	 * 复杂度：
+	 */
 	public static ListNode deleteDuplicates(ListNode head) {
 		ListNode pre = new ListNode(0);
 		pre.next = head;

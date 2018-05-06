@@ -22,7 +22,12 @@ public class NO21MergeTwoSortedLists {
 		}
 	}
 	
-	
+	/**
+	 * 
+	 *2018年5月6日 下午12:17:12
+	 * beats:71.32%
+	 * 复杂度：
+	 */
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
     	ListNode l3 = new ListNode(0);
     	ListNode pre=l3;

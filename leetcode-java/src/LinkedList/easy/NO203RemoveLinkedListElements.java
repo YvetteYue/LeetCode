@@ -22,6 +22,12 @@ public class NO203RemoveLinkedListElements {
 		}
 	}
 
+	/**
+	 * 
+	 *2018年5月6日 下午12:23:38
+	 * beats:100%
+	 * 复杂度：
+	 */
 	public static ListNode removeElements(ListNode head, int val) {
 		while(head!=null&&head.val==val){
 			head=head.next;

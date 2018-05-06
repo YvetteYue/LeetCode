@@ -27,8 +27,12 @@ public class NO237DeleteNodeinaLinkedList {
 	}
 
 	/**
-	 * Definition for singly-linked list. public class ListNode { int val;
+	* Definition for singly-linked list. public class ListNode { int val;
 	 * ListNode next; ListNode(int x) { val = x; } }
+	 *2018年5月6日 下午12:09:39
+	 * beats:100%
+	 * 复杂度：o(1)
+	 * 
 	 */
 	// 对于只知道当前当前要删除的节点posi，则只知道当前节点的后继，所以只能将next值复制到当前，删除后继即可。
 	// 复杂度为o(1)

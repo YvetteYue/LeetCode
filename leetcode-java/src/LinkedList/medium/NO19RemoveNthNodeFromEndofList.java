@@ -18,7 +18,13 @@ public class NO19RemoveNthNodeFromEndofList {
 		}
 	}
 
-	//最基础版本 	20.98%
+	//
+	/**
+	 * 最基础版本 
+	 *2018年5月6日 下午12:34:53
+	 * beats:27.74%
+	 * 复杂度：
+	 */
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
 		ListNode l1=head;
 		ListNode l2=head;

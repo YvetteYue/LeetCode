@@ -17,6 +17,12 @@ public class NO725SplitLinkedListinParts {
 		}
 	}
 
+	/**
+	 * 
+	 *2018年5月6日 下午12:24:43
+	 * beats:14.29%
+	 * 复杂度：
+	 */
 	public static ListNode[] splitListToParts(ListNode root, int k) {
 		ListNode[] listNodes=new ListNode[k];
 		ListNode pre=root;

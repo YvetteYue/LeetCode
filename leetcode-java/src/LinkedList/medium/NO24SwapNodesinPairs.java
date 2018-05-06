@@ -1,7 +1,11 @@
 package LinkedList.medium;
 
 import bean.ListNode;
-
+/**
+ * 2018年5月6日 下午12:41:29
+ * @author Yvette
+ *
+ */
 public class NO24SwapNodesinPairs {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package LinkedList.easy;
+package LinkedList.medium;
 
 import bean.ListNode;
 
@@ -33,6 +33,12 @@ public class NO2AddTwoNumbers {
 		}
 	}
 
+	/**
+	 * 
+	 *2018年5月6日 下午12:41:29
+	 * beats:69.69%
+	 * 复杂度：
+	 */
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		// 链表尾插法
 		ListNode l3 = new ListNode(0);// head

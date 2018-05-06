@@ -26,6 +26,12 @@ public class NO83RemoveDuplicatesfromSortedList {
 			res = res.next;
 		}
 	}
+	/**
+	 * 
+	 *2018年5月6日 下午12:18:37
+	 * beats:42.98%
+	 * 复杂度：
+	 */
 	public static ListNode deleteDuplicates(ListNode head) {
 		if(head==null) return head;
 		ListNode listNode=new ListNode(head.val);

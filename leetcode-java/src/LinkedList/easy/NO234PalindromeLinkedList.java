@@ -29,6 +29,12 @@ public class NO234PalindromeLinkedList {
 	
 	}
 
+	/**
+	 * 
+	 *2018年5月6日 下午12:21:08
+	 * beats:37.62%
+	 * 复杂度：
+	 */
 	public static boolean isPalindrome(ListNode head) {
 		ListNode reverseList=null;
 		ListNode pre=head;

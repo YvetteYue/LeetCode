@@ -15,6 +15,12 @@ public class NO328OddEvenLinkedList {
 		 }
 	}
 	
+	/**
+	 * 
+	 *2018年5月6日 下午12:27:33
+	 * beats:86.51%
+	 * 复杂度：
+	 */
 	public static ListNode oddEvenList(ListNode head) {
 		ListNode odd=new ListNode(0);
 		ListNode oddpre=odd;

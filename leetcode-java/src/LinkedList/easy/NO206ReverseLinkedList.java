@@ -22,10 +22,16 @@ public class NO206ReverseLinkedList {
 	}
 
 	/**
-	 * 迭代版
-	 * 只需要在创建时tail节点为null,在tail指针之前添加新节点即可，不需要pre节点
 	 * @param head
 	 * @return
+	 */
+	/**
+	 *  * 
+	 * 迭代版
+	 * 只需要在创建时tail节点为null,在tail指针之前添加新节点即可，不需要pre节点
+	 *2018年5月6日 下午12:15:38
+	 * beats:30.7%
+	 * 复杂度：
 	 */
 	public static ListNode reverseList1(ListNode head) {
 		ListNode tail = null;
@@ -38,8 +44,11 @@ public class NO206ReverseLinkedList {
 		return tail;
 	}
 
-	/*
+	/**
 	 * 递归版
+	 *2018年5月6日 下午12:13:16
+	 * beats:30.7%
+	 * 复杂度：
 	 */
 	public static ListNode reverseList2(ListNode head) {
 		// 在链表之前添加节点

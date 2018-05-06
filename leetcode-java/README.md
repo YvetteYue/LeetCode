@@ -2,36 +2,34 @@
 
 ### (1)easy
 | # | Title | Acceptance |finished|
-|---| ----- | ------|--------|--|
-|237|Delete Node in a Linked List|
-|206|Reverse Linked List|
-|21|Merge Two Sorted Lists|
-|83|Remove Duplicates from Sorted List|
-|141|Linked List Cycle|
-|234|Palindrome Linked List|
-|203|Remove Linked List Elements|
+|---| ----- | ------|--------|
+|237|Delete Node in a Linked List|100%|yes|
+|206|Reverse Linked List|递归版(30.7%),迭代版(30.7%)|
+|21|Merge Two Sorted Lists|71.32%|
+|83|Remove Duplicates from Sorted List|42.98%|
+|141|Linked List Cycle|98.80%|yes|
+|234|Palindrome Linked List|37.62%|
+|203|Remove Linked List Elements|100%|yes|
 |160|Intersection of Two Linked Lists|
 
 ### (2)medium|
 
 | # | Title | Acceptance |finished|
 |---| ----- | ------------------ |--------|
-|369|Plus One Linked List|
 |817|Linked List Components|
-|725|Split Linked List in Parts|
-|445|Add Two Numbers II|
-|328|Odd Even Linked List|
-|24|Swap Nodes in Pairs|
-|379|Design Phone Directory|
+|725|Split Linked List in Parts|14.29%|
+|445|Add Two Numbers II|34.90%->54.68%|
+|328|Odd Even Linked List|86.51%|
+|24|Swap Nodes in Pairs|递归版、迭代版100%|yes|
 |109|Convert Sorted List to Binary Search Tree||
-|147|Insertion Sort List|
-|19|Remove Nth Node From End of List|
+|147|Insertion Sort List|33.42%|
+|19|Remove Nth Node From End of List|27.74%|
 |86|Partition List|
-|92|Reverse Linked List II|
+|92|Reverse Linked List II|16.32%|
 |142|Linked List Cycle II|
-|82|Remove Duplicates from Sorted List II||
+|82|Remove Duplicates from Sorted List II|51.16%|
 |148|Sort List|
-|2|Add Two Numbers|
+|2|Add Two Numbers|69.69%|
 |143|Reorder List|
 |138|Copy List with Random Pointer|
 |61|Rotate List|

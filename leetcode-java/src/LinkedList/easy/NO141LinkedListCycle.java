@@ -16,8 +16,13 @@ public class NO141LinkedListCycle {
 		System.out.println(hasCycle(listNode));
 	}
 
-	//判环方法，直接用两个指针，一个是使用单倍步速，另一个使用双倍步速
-	//如果一个有环则必有一个时刻两个指针相遇
+	/**
+	 *判环方法，直接用两个指针，一个是使用单倍步速，另一个使用双倍步速
+	*如果一个有环则必有一个时刻两个指针相遇
+	 *2018年5月6日 下午12:19:57
+	 * beats:98.80%
+	 * 复杂度：
+	 */
 	public static  boolean hasCycle(ListNode head) {
 		if(head==null) return false;
 		ListNode l1=head;
