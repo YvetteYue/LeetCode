@@ -35,6 +35,5 @@ public class NO566ReshapetheMatrix {
 			}
 		}
 		return num2;
-
 	}
 }

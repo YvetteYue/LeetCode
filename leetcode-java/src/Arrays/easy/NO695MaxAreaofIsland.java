@@ -36,7 +36,6 @@ public class NO695MaxAreaofIsland {
 		}
 		return max;
 	}
-
 	
 	private static int dfs(int[][] grid, int i, int j) {
 		int testmp=0;

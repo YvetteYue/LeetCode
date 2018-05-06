@@ -46,36 +46,35 @@
 
 | # | Title | Acceptance |finished|
 |---| ----- | ------------------ |--------|
-|561|Array Partition I|
-|566|Reshape the Matrix|
-|766|Toeplitz Matrix|
-|485|Max Consecutive Ones
-|243|Shortest Word Distance
-|695|Max Area of Island|
-|283|Move Zeroes|
-|448|Find All Numbers Disappeared in an Array|
-|717|1-bit and 2-bit Characters|
-|169|Majority Element|
+|561|Array Partition I|63.21%|
+|566|Reshape the Matrix|64.61%|
+|766|Toeplitz Matrix|3%->77%(空间局部性优化)|
+|485|Max Consecutive Ones|99.7%|yes|
+|695|Max Area of Island|19%(dfs)|
+|283|Move Zeroes|17%|
+|448|Find All Numbers Disappeared in an Array|25%|
+|717|1-bit and 2-bit Characters|95.92%|yes|
+|169|Majority Element|79.3%|
 |122|Best Time to Buy and Sell Stock II|
-|167|Two Sum II - Input array is sorted|
-|217|Contains Duplicate|
+|167|Two Sum II - Input array is sorted|3%->26.94%|
+|217|Contains Duplicate|99.38%|yes|
 |697|Degree of an Array|
 |661|Image Smoother|
 |268|Missing Number|
-|628|Maximum Product of Three Numbers|
+|628|Maximum Product of Three Numbers|6.34%|
 |746|Min Cost Climbing Stairs|
 |121|Best Time to Buy and Sell Stock|
 |674|Longest Continuous Increasing Subsequence|
-|747|Largest Number At Least Twice of Others|
+|747|Largest Number At Least Twice of Others|15.38%|
 |27|Remove Element|
 |53|Maximum Subarray|
-|118|Pascal's Triangle|
+|118|Pascal's Triangle|99.87%|yes|
 |35|Search Insert Position|
-|66|Plus One|
+|66|Plus One|68.51%|
 |724|Find Pivot Index|
-|119|Pascal's Triangle II|
+|119|Pascal's Triangle II|53%|
 |1|Two Sum|
-|643|Maximum Average Subarray I|
+|643|Maximum Average Subarray I|96.87%|yes|
 |26|Remove Duplicates from Sorted Array|
 |624|Maximum Distance in Arrays
 |219|Contains Duplicate II|

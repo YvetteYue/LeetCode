@@ -8,7 +8,7 @@ public class NO485MaxConsecutiveOnes {
 		
 		System.out.println(findMaxConsecutiveOnes(num));
 	}
-
+	
 	/**
 	 * 
 	 *2018年4月22日 下午10:22:10

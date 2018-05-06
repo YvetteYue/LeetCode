@@ -23,6 +23,5 @@ public class NO561ArrayPartitionI {
 			sum+=nums[i];
 		}
 		return sum;
-
 	}
 }

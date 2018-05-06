@@ -9,7 +9,7 @@ public class NO766ToeplitzMatrix {
 		int[][] matrix={{1,2,3,4},{5,1,2,3},{9,5,1,2}};
 		System.out.println(isToeplitzMatrix2(matrix));
 	}
-
+	
 	/**
 	 * 
 	 *2018年4月22日 下午10:24:24
