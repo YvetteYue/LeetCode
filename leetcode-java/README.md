@@ -50,6 +50,7 @@
 |566|Reshape the Matrix|64.61%|
 |766|Toeplitz Matrix|3%->77%(空间局部性优化)|
 |485|Max Consecutive Ones|99.7%|yes|
+|830|Positions of Large Groups|-|yes|
 |695|Max Area of Island|19%(dfs)|
 |283|Move Zeroes|17%|
 |448|Find All Numbers Disappeared in an Array|25%|
