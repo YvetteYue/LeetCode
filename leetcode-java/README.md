@@ -78,7 +78,7 @@
 |643|Maximum Average Subarray I|96.87%|yes|
 |26|Remove Duplicates from Sorted Array|
 |624|Maximum Distance in Arrays
-|219|Contains Duplicate II|
+|219|Contains Duplicate II|43%->95%|yes|
 |88|Merge Sorted Array|
 |605|Can Place Flowers|
 |581|Shortest Unsorted Continuous Subarray|
