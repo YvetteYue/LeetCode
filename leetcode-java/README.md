@@ -83,7 +83,7 @@
 |605|Can Place Flowers|
 |581|Shortest Unsorted Continuous Subarray|
 |532|K-diff Pairs in an Array|
-|414|Third Maximum Number|
+|414|Third Maximum Number|10%|
 |189|Rotate Array|98%(方法1)
 |665|Non-decreasing Array|
 
