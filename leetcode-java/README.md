@@ -67,7 +67,7 @@
 |121|Best Time to Buy and Sell Stock|
 |674|Longest Continuous Increasing Subsequence|
 |747|Largest Number At Least Twice of Others|15.38%|
-|27|Remove Element|
+|27|Remove Element|99%|yes|
 |53|Maximum Subarray|
 |118|Pascal's Triangle|99.87%|yes|
 |35|Search Insert Position|
@@ -76,15 +76,15 @@
 |119|Pascal's Triangle II|53%|
 |1|Two Sum|
 |643|Maximum Average Subarray I|96.87%|yes|
-|26|Remove Duplicates from Sorted Array|
+|26|Remove Duplicates from Sorted Array|22%->64%->96%|yes|
 |624|Maximum Distance in Arrays
 |219|Contains Duplicate II|43%->95%|yes|
-|88|Merge Sorted Array|
+|88|Merge Sorted Array|99%|yes|
 |605|Can Place Flowers|
 |581|Shortest Unsorted Continuous Subarray|
 |532|K-diff Pairs in an Array|
 |414|Third Maximum Number|
-|189|Rotate Array|
+|189|Rotate Array|98%(方法1)
 |665|Non-decreasing Array|
 
 
