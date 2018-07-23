@@ -2,11 +2,11 @@
 ### (1)easy
 | # | Title | Acceptance |finished|
 |---| ----- | ------|--------|
-|461|Hamming Distance|
+|461|Hamming Distance|99.2%(递归、迭代)|yes|
 |617|Merge Two Binary Trees|
-|136|Single Number|
+|136|Single Number|100%(位运算)|yes|
 |104|Maximum Depth of Binary Tree|
-|226|Invert Binary Tree|
+|226|Invert Binary Tree|12.5%(迭代),100%(递归)|yes|
 |283|Move Zeroes|17%|
 |448|Find All Numbers Disappeared in an Array|25%|
 |538|Convert BST to Greater Tree|
