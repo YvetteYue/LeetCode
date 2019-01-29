@@ -22,7 +22,7 @@ public class NO448FindAllNumbersDisappearedinanArray {
 	 * 复杂度：
 	 */
 	public static List<Integer> findDisappearedNumbers(int[] nums) {
-		List<Integer> list=new ArrayList<>();
+		List<Integer> list=new ArrayList<Integer>();
 		for(int i=0;i<nums.length;i++){
 			int tmp=nums[i];
 			if(tmp<0){

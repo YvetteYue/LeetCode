@@ -37,8 +37,8 @@ public class NO445AddTwoNumbersII {
 	 * 复杂度：
 	 */
 	public static ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
-		Stack<Integer> l1Stack=new Stack<>();
-		Stack<Integer> l2Stack=new Stack<>();
+		Stack<Integer> l1Stack=new Stack<Integer>();
+		Stack<Integer> l2Stack=new Stack<Integer>();
 		ListNode l3=null;
 		while(l1!=null){
 			l1Stack.add(l1.val);

@@ -12,7 +12,6 @@ public class NO167TwoSumIIInputarrayissorted {
 		for(int t:a){
 			System.out.println(t);
 		}
-		
 	}
 
 	/**

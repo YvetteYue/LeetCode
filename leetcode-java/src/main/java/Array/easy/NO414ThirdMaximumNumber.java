@@ -25,7 +25,7 @@ public class NO414ThirdMaximumNumber {
 	 * 复杂度：
 	 */
 	public static  int thirdMax(int[] nums) {
-		List<Integer> list=new ArrayList<>();
+		List<Integer> list=new ArrayList<Integer>();
 		for(int i=0;i<nums.length;i++){
 			Collections.sort(list);
 			if(list.contains(nums[i]))continue;

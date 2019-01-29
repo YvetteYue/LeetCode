@@ -29,8 +29,8 @@ class MinStack {
   Stack<Integer> stack;
   Stack<Integer> minstack;
   public MinStack() {
-     stack=new Stack<>();
-     minstack=new Stack<>();
+     stack=new Stack<Integer>();
+     minstack=new Stack<Integer>();
   }
   
   public void push(int x) {

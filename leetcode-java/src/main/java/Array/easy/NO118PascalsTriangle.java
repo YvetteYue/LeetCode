@@ -11,7 +11,7 @@ public class NO118PascalsTriangle {
 	 * 复杂度：O(n^2)
 	 */
 	public List<List<Integer>> generate(int numRows) {
-		List<List<Integer>> alllist = new ArrayList<>();
+		List<List<Integer>> alllist = new ArrayList<List<Integer>>();
 		for (int i = 0; i < numRows; i++) {
 			List<Integer> list = new ArrayList<Integer>();
 			if (i == 0) {

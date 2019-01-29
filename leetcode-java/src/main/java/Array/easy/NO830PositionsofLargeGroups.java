@@ -21,7 +21,7 @@ public class NO830PositionsofLargeGroups {
 
 	public static List<List<Integer>> largeGroupPositions(String S) {
 		int len=S.length();
-		List<List<Integer>> list=new ArrayList<>();
+		List<List<Integer>> list=new ArrayList<List<Integer>>();
 		
 		int i=0;
 		while(i<len){
@@ -33,7 +33,7 @@ public class NO830PositionsofLargeGroups {
 				k++;
 			}
 			if(k>=3){
-				List<Integer> data=new ArrayList<>();
+				List<Integer> data=new ArrayList<Integer>();
 				data.add(start);
 				data.add(i-1);
 				list.add(data);

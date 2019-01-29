@@ -31,7 +31,7 @@ public class NO104MaximumDepthofBinaryTree {
   public static int maxDepth(TreeNode root) {
     if(root==null) return 0;
     int max=0;
-    Queue<TreeNode> treeNodes=new LinkedList<>();
+    Queue<TreeNode> treeNodes=new LinkedList<TreeNode>();
     root.val=1;
     treeNodes.add(root);
     while(!treeNodes.isEmpty()){

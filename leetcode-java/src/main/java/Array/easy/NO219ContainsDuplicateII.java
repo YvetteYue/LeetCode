@@ -29,7 +29,7 @@ public class NO219ContainsDuplicateII {
 	 * 复杂度：
 	 */
 	public static  boolean containsNearbyDuplicate(int[] nums, int k) {
-		List<Integer> list=new ArrayList<>();
+		List<Integer> list=new ArrayList<Integer>();
 		if(k==0)return false;
 		for(int i=0;i<nums.length;i++){
 			if(i<k){
@@ -58,7 +58,7 @@ public class NO219ContainsDuplicateII {
 	public static  boolean containsNearbyDuplicate2(int[] nums, int k) {
 		//k=0时可以直接返回
 		if(k==0)return false;
-		Map<Integer, Integer> map=new HashMap<>();
+		Map<Integer, Integer> map=new HashMap<Integer, Integer>();
 		for(int i=0;i<nums.length;i++){
 			if(map.containsKey(nums[i])){
 				//如果差小于k，那么符合条件，否则更新i值
@@ -78,7 +78,7 @@ public class NO219ContainsDuplicateII {
 	 */
 	public static  boolean containsNearbyDuplicate3(int[] nums, int k) {
 		if(k==0||nums.length<=1)return false;
-		Set<Integer> set=new HashSet<>();
+		Set<Integer> set=new HashSet<Integer>();
 		for(int i=0;i<nums.length;i++){
 			if(i>k){
 //				能remove说明前面没有重的！

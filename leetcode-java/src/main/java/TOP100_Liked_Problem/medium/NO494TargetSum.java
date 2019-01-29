@@ -21,7 +21,7 @@ public class NO494TargetSum {
     for (int i = 0; i < nums.length; i++) {
       sum += nums[i];
     }
-    dfs(nums, S, 0, new ArrayList<>(), sum);
+    dfs(nums, S, 0, new ArrayList<Integer>(), sum);
     return num;
   }
 

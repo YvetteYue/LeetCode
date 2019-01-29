@@ -20,8 +20,8 @@ public class NO394DecodeString {
    * 复杂度：
    */
   public static String decodeString(String s) {
-    Stack<String> strStack=new Stack<>();
-    Stack<Integer> timesStack=new Stack<>();
+    Stack<String> strStack=new Stack<String>();
+    Stack<Integer> timesStack=new Stack<Integer>();
     int i=0;
     char[] ch=s.toCharArray();
     while(i<s.length()){
