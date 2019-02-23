@@ -64,4 +64,21 @@ public class NO206ReverseLinkedList {
 		head = head.next;
 		return addNodeBefore(head, newHead);
 	}
+
+	/*
+	*
+	 * @Date 下午3:41 2019/2/17
+	 * 复杂度：
+	 * beats：100%
+	 **/
+	public ListNode reverseList(ListNode head) {
+		ListNode tmp=null;
+		while(head!=null){
+			ListNode p=head.next;
+			head.next=tmp;
+			tmp=head;
+			head=p;
+		}
+		return tmp;
+	}
 }

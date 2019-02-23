@@ -71,7 +71,7 @@ public class NO114FlattenBinaryTreetoLinkedList {
     TreeNode prev = null;
 
     /*
-    *   TODO 链表方式 不新建元素，直接修改引用方式,使用的前插法！！
+    *   TODO finished 链表方式 不新建元素，直接修改引用方式,使用的前插法！！
     *   右左根
      * @Date 上午11:33 2019/2/13
      * 复杂度：
