@@ -63,6 +63,12 @@ public class NO104MaximumDepthofBinaryTree {
     return Math.max(maxDepth(root.left),maxDepth(root.right))+1;
   }
   
+  //100%
+  public int maxDepth3(TreeNode root) {
+      if(root==null) return 0;
+      else return Math.max(maxDepth(root.left),maxDepth(root.right))+1;
+  }
+  
   public static void main(String[] args) {
     TreeNode root=new TreeNode(3);
     root.left=new TreeNode(9);
