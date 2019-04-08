@@ -47,4 +47,37 @@ public class NO21MergeTwoSortedLists {
     	}
 		return l3.next;
     }
+    
+    /**
+	 * 1.l1>l2 那么循环l1;2.l1<l2那么循环l2;3.l1=null&&l2!=null=>result.next=l2;4.l1!=null&&l2=null =>result.next=l1
+	 *2019年4月7日 下午22:58:12
+	 * beats:100%
+	 * 复杂度：o(n)
+	 */
+    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+        ListNode tmp=new ListNode(-1);
+        ListNode result=tmp;
+        while(l1!=null||l2!=null){
+            while(l1!=null&&l2!=null&&l1.val<=l2.val){
+                result.next=l1;
+                l1=l1.next;
+                result=result.next;
+            }
+            while(l1!=null&&l2!=null&&l1.val>=l2.val){
+                result.next=l2;
+                l2=l2.next;
+                result=result.next;
+            }
+            if(l1==null&&l2!=null){
+                result.next=l2;
+                l2=null;
+            }
+            if(l2==null&&l1!=null){
+                result.next=l1;
+                l1=null;
+            }
+        }
+        return tmp.next;
+    }
+    
 }
