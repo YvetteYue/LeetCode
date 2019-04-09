@@ -1,4 +1,4 @@
-package TOPInterviewQuestions.hard;
+package TOP100_Liked_Problem.hard;
 
 import java.util.Stack;
 

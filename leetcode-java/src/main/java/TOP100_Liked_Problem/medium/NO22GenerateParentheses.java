@@ -1,4 +1,4 @@
-package TOPInterviewQuestions.medium;
+package TOP100_Liked_Problem.medium;
 
 import java.util.ArrayList;
 import java.util.List;

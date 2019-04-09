@@ -1,4 +1,4 @@
-package TOP100_Liked_Problem.medium;
+package TOPInterviewQuestions.medium;
 
 import bean.Node;
 

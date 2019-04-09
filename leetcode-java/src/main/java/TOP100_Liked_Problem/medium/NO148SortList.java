@@ -1,8 +1,6 @@
-package TOPInterviewQuestions.medium;
+package TOP100_Liked_Problem.medium;
 
 import bean.ListNode;
-
-import java.util.List;
 
 public class NO148SortList {
 

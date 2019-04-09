@@ -1,8 +1,6 @@
-package TOP100_Liked_Problem.medium;
+package TOPInterviewQuestions.medium;
 
-import java.util.AbstractMap;
 import java.util.Comparator;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 public class NO378KthSmallestElementinaSortedMatrix {
