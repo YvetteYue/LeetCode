@@ -28,6 +28,25 @@ public class NO461HammingDistance {
     return sum;
   }
 
+  /*
+  *
+   * @Date 下午12:26 2019/4/14
+   * 复杂度：
+   * beats：100%
+   **/
+  public int hammingDistance2(int x, int y) {
+    int count=0;
+    while(x!=0||y!=0){
+      if(((x^y)&1)==1){
+        count++;
+      }
+      x=x>>1;
+      y=y>>1;
+    }
+    return count;
+  }
+
+
   /**
    * 递归 f(x,y)=(x^y)%2+f(x/2,y/2); 
    * 2018年7月20日 上午9:51:57 

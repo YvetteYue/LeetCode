@@ -68,23 +68,19 @@ public class NO114FlattenBinaryTreetoLinkedList {
         }
     }
 
-    TreeNode prev = null;
-
     /*
-    *   TODO finished 链表方式 不新建元素，直接修改引用方式,使用的前插法！！
-    *   右左根
-     * @Date 上午11:33 2019/2/13
-     * 复杂度：
-     * beats：
+    *
+     * @Date 下午11:50 2019/4/14
+     * 复杂度：o(m) 递归 前插法 所以是右左根 直接修改引用
+     * beats：100%
      **/
-    public void flatten2(TreeNode root) {
-        if(root == null)
-            return;
+    private TreeNode pre=null;
+    public void flatten3(TreeNode root) {
+        if(root==null) return;
         flatten(root.right);
         flatten(root.left);
-        root.right = prev;
-        root.left = null;
-        prev = root;
+        root.right=pre;
+        root.left=null;
+        pre=root;
     }
-
 }

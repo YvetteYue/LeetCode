@@ -36,4 +36,24 @@ public class NO141LinkedListCycle {
 		}
 		return false;
 	}
+
+	/*
+	*
+	 * @Date 下午12:35 2019/4/13
+	 * 复杂度：o(n)
+	 * beats：100%
+	 **/
+	public boolean hasCycle2(ListNode head) {
+		ListNode p1=head;
+		ListNode p2=head;
+		while(p1!=null&&p1.next!=null&&p2!=null&&p2.next!=null&&p2.next.next!=null){
+			p1=p1.next;
+			p2=p2.next.next;
+			if(p1==p2)
+				return true;
+		}
+		return false;
+	}
+
 }
+

@@ -42,4 +42,26 @@ public class NO121BestTimetoBuyandSellStock {
         if(result<0)return 0;
         return result;
     }
+
+    /*
+    *
+     * @Date 下午2:52 2019/4/14
+     * 复杂度：
+     * beats：80%
+     **/
+    public int maxProfit2(int[] prices) {
+        if(prices.length<=1) return 0;
+        int min=prices[0];
+        int profit=0;
+        for(int i=1;i<prices.length;i++){
+            if(prices[i]<min){
+                min=prices[i];
+            }else{
+                int tmp=prices[i]-min;
+                if(tmp>profit)
+                    profit=tmp;
+            }
+        }
+        return profit;
+    }
 }

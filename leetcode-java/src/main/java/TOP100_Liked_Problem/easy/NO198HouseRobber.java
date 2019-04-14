@@ -47,4 +47,27 @@ public class NO198HouseRobber {
         return sum[nums.length-1];
     }
 
+    /*
+    *   res[i]=max(now+res[i-2],now+res[i-3]);
+    *   max=max(res)
+     * @Date 下午3:22 2019/4/14
+     * 复杂度：O(n)
+     * beats：100%
+     **/
+    public int rob3(int[] nums) {
+        if(nums.length==0) return 0;
+        int res[]=new int[nums.length];
+        int max=0;
+        for(int i=0;i<nums.length;i++){
+            res[i]=nums[i];
+            if(i==2){
+                res[i]+=res[i-2];
+            }else if(i>=3){
+                res[i]+=Math.max(res[i-3],res[i-2]);
+            }
+            max=Math.max(max,res[i]);
+        }
+        return max;
+    }
+
 }

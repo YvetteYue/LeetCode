@@ -22,7 +22,7 @@ public class NO338CountingBits {
     }
 
     /*
-    *
+    *   dp result[i]=result[i>>1]+(i&1)
      * @Date 下午5:43 2019/3/7
      * 复杂度：
      * beats：99.97%

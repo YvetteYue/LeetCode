@@ -94,5 +94,24 @@ public class NO538ConvertBSTtoGreaterTree {
             dfs(root.left);
         }
     }
+
+
+    private int sum1=0;
+    /*
+    * 根左右 累加即可
+     * @Date 下午2:12 2019/4/14
+     * 复杂度：O(n)
+     * beats：100%
+     **/
+    public TreeNode convertBST3(TreeNode root) {
+        if(root!=null){
+            convertBST(root.right);
+            sum1+=root.val;
+            root.val=sum1;
+            convertBST(root.left);
+        }
+        return root;
+    }
+
 }
 

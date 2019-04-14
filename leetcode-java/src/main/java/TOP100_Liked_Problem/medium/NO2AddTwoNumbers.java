@@ -70,5 +70,32 @@ public class NO2AddTwoNumbers {
 		}
 		return l3.next;
 	}
+
+
+	/*
+	*
+	 * @Date 下午7:17 2019/4/14
+	 * 复杂度：o(n)
+	 * beats：97%
+	 **/
+	public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
+		int prenum=0;
+		ListNode pre=new ListNode(-1);
+		ListNode result=pre;
+		while(l1!=null||l2!=null||prenum!=0){
+			if(l1!=null){
+				prenum+=l1.val;
+				l1=l1.next;
+			}
+			if(l2!=null){
+				prenum+=l2.val;
+				l2=l2.next;
+			}
+			pre.next=new ListNode(prenum%10);
+			pre=pre.next;
+			prenum=prenum/10;
+		}
+		return result.next;
+	}
 }
 

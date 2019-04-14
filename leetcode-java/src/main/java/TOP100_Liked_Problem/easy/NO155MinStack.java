@@ -55,3 +55,42 @@ class MinStack {
     return minstack.peek();
   }
 }
+
+/*
+*
+ * @Date 下午5:20 2019/4/14
+ * 复杂度：O(m)
+ * beats：99%
+ **/
+class MinStack1 {
+
+  /** initialize your data structure here. */
+  int min=Integer.MAX_VALUE;
+  Stack<Integer> stack=new Stack<Integer>();
+  public MinStack1() {
+
+  }
+
+  public void push(int x) {
+    //当插入新的值时最小值改变时，插入上次旧的min
+    if(x<=min){
+      stack.push(min);
+      min=x;
+    }
+    stack.push(x);
+  }
+
+  public void pop() {
+    //最小值改变时，当前min为栈中的值
+    if(min==stack.pop())
+      min=stack.pop();
+  }
+
+  public int top() {
+    return stack.peek();
+  }
+
+  public int getMin() {
+    return min;
+  }
+}

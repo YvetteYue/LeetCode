@@ -1,6 +1,7 @@
 package TOP100_Liked_Problem.easy;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class NO581ShortestUnsortedContinuousSubarray {
 
@@ -19,7 +20,7 @@ public class NO581ShortestUnsortedContinuousSubarray {
         int nums[]=
                 {1,2,3,4};
 //                {2, 6, 4, 8, 10, 9, 15};
-        System.out.println(findUnsortedSubarray2(nums));
+        System.out.println(findUnsortedSubarray(nums));
     }
 
     /*
@@ -27,7 +28,7 @@ public class NO581ShortestUnsortedContinuousSubarray {
      * 暴力排序做法
      * @Date 下午7:22 2019/2/9
      * 复杂度：o(nlgn)
-     * beats：68.46%
+     * beats：90%
      **/
     public static int findUnsortedSubarray(int[] nums) {
         int tmp[]=Arrays.copyOf(nums,nums.length);
@@ -48,9 +49,100 @@ public class NO581ShortestUnsortedContinuousSubarray {
         return i-begin+1;
     }
 
+    /*
+    *   选择排序的思想
+     * @Date 下午4:33 2019/4/14
+     * 复杂度：o(n^2)
+     * beats：5%
+     **/
+    public int findUnsortedSubarray2(int[] nums) {
+        int len=nums.length;
+        int r=0;
+        int l=nums.length;
+        for(int i=0;i<len;i++){
+            for(int j=i+1;j<len;j++){
+                if(nums[j]<nums[i]){
+                    r=Math.max(r,j);    //那么对应的最小值得最远的位置就是无序的最大位置
+                    l=Math.min(l,i);    // 有比当前小的，那么当前位置开始无序
+                }
+            }
+        }
+        if(r-l<0) return 0;
+        return r-l+1;
+    }
 
+    /*
+    * 使用栈
+     * @Date 下午5:52 2019/4/14
+     * 复杂度：o(n)
+     * beats：14%
+     **/
+    public int findUnsortedSubarray3(int[] nums) {
+        Stack<Integer> stack=new Stack<Integer>();
+        int l=nums.length;
+        int r=0;
+        for(int i=0;i<nums.length;i++){
+            while(!stack.isEmpty()&&nums[stack.peek()]>nums[i]){
+                l=Math.min(l,stack.pop());
+            }
+            stack.push(i);
+        }
+        stack.clear();
+        //复杂度o(n)
+        for(int i=nums.length-1;i>=0;i--){
+            while(!stack.isEmpty()&&nums[stack.peek()]<nums[i]){
+                r=Math.max(r,stack.pop());
+            }
+            stack.push(i);
+        }
+        return r-l>0?r-l+1:0;
+    }
+
+
+    /*
+    *   不用额外空间
+     * @Date 下午6:18 2019/4/14
+     * 复杂度：o(n)
+     * beats：90%
+     **/
+    public int findUnsortedSubarray4(int[] nums) {
+        int min=0;
+        int i=0;
+        int r=0;
+        while(i<nums.length&&nums[i]>=nums[min]){
+            min=i;
+            i++;
+        }
+        while(i<nums.length){
+            if(min<0){
+                break;
+            }
+            while(min>=0&&nums[i]<nums[min]){
+                min--;
+            }
+            i++;
+        }
+
+        int j=nums.length-1;
+        int max=j;
+        while(j>=0&&nums[j]<=nums[max]){
+            max=j;
+            j--;
+        }
+        while(j>=0){
+            if(max>=nums.length){
+                break;
+            }
+            while(max<nums.length&&nums[j]>nums[max]){
+                max++;
+            }
+            j--;
+        }
+        if(max-min-1<0) return 0;
+        return max-(min+1);
+    }
     //TODO 简单做法
-    public static int findUnsortedSubarray2(int[] nums) {
+    public static int findUnsortedSubarray5(int[] nums) {
         int i=1,begin,end;
         while(i<nums.length-1){
             if(nums[i]>nums[i+1]){
@@ -68,4 +160,10 @@ public class NO581ShortestUnsortedContinuousSubarray {
         System.out.println(begin+","+i);
         return i-begin+1;
     }
+
+
+
+    
+
+    
 }

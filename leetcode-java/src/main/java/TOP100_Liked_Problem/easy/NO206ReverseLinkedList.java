@@ -81,4 +81,22 @@ public class NO206ReverseLinkedList {
 		}
 		return tmp;
 	}
+
+	/*
+	*
+	 * @Date 下午12:47 2019/4/13
+	 * 复杂度：O(n)
+	 * beats：100%
+	 **/
+	public ListNode reverseList3(ListNode head) {
+		ListNode result=null;
+		ListNode pre=head;
+		while(pre!=null){
+			ListNode tmp=pre.next;
+			pre.next=result;
+			result=pre;
+			pre=tmp;
+		}
+		return result;
+	}
 }

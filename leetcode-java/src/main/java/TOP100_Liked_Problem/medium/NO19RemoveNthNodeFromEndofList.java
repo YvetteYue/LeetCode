@@ -45,5 +45,54 @@ public class NO19RemoveNthNodeFromEndofList {
 		return head;
 	}
 
-	
+
+	/*
+	*	two pass
+	 * @Date 下午7:50 2019/4/14
+	 * 复杂度：o(n)
+	 * beats：100%
+	 **/
+	public ListNode removeNthFromEnd1(ListNode head, int n) {
+		int count=0;
+		ListNode t1=head;
+		ListNode t2=new ListNode(0);
+		t2.next=head;
+		while(t1!=null){
+			t1=t1.next;
+			count++;
+		}
+		ListNode first=t2;
+		int res=count-n;
+		while(res>0){
+			first=first.next;
+			res--;
+		}
+		first.next=first.next.next;
+		return t2.next;
+	}
+
+
+	/*
+	*	one pass
+	*	两个指针~ p1先移动n+1次 说明 p1和p2指针中间有n个点，然后两个指针同时移动，当第p1是null时，说明p2位置的next恰好要删除
+	 * @Date 下午7:56 2019/4/14
+	 * 复杂度：o(n)
+	 * beats：100%
+	 **/
+	public ListNode removeNthFromEnd2(ListNode head, int n) {
+		ListNode dummy=new ListNode(0);
+		dummy.next=head;
+		ListNode first=dummy;
+		ListNode second=dummy;
+		//注意是n+1个 因为 first 比head多一个点
+		for(int i=0;i<=n;i++){
+			first=first.next;
+		}
+		while(first!=null){
+			first=first.next;
+			second=second.next;
+		}
+		second.next=second.next.next;
+		return dummy.next;
+	}
 }

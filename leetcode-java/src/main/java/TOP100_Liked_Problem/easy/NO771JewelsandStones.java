@@ -46,7 +46,7 @@ public class NO771JewelsandStones {
     }
 
     /*
-    * 用数组hash
+    * 用数组hash  前128个为字母啥的
      * @Date 下午5:29 2019/2/8
      * 复杂度：
      * beats：99.78%
