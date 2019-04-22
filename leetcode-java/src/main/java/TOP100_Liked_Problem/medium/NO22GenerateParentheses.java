@@ -29,6 +29,11 @@ public class NO22GenerateParentheses {
      * 复杂度：o(2^n)
      * beats：100.00%
      **/
+    public static List<String> generateParenthesis(int n) {
+        chs=new char[n*2];
+        dfs(-1,0,n,0,0);
+        return list;
+    }
     public static void dfs(int pos,int sum,int n,int xl,int yl){
         if(sum>n||sum<0) return;
         if(xl>n) return;
@@ -48,11 +53,37 @@ public class NO22GenerateParentheses {
         }
     }
 
-    public static List<String> generateParenthesis(int n) {
-        chs=new char[n*2];
-        dfs(-1,0,n,0,0);
+    /*
+    *
+     * @Date 下午3:03 2019/4/21
+     * 复杂度：o(2^n)
+     * beats：97%
+     **/
+    public List<String> generateParenthesis2(int n) {
+        List<String> list=new ArrayList<>();
+        if(n==0) return list;
+        dfs(list,"",n-1,n,true);
         return list;
     }
+
+    private void dfs(List<String> result,String str,int left,int right,boolean vis){
+        if(right<left) return;
+        if(vis){
+            str+="(";
+        }else{
+            str+=')';
+        }
+        if(left==0&&right==0){
+            result.add(str);
+            return;
+        }
+        if(left>0)
+            dfs(result,str,left-1,right,true);
+        if(right>0)
+            dfs(result,str,left,right-1,false);
+    }
+
+
 
 
 }

@@ -16,7 +16,7 @@ public class NO394DecodeString {
   /**
    * 
    *2018年7月24日 下午6:28:27
-   * beats:98.86%
+   * beats:90%
    * 复杂度：
    */
   public static String decodeString(String s) {
@@ -65,7 +65,52 @@ public class NO394DecodeString {
     return result.toString();
   }
 
-  
+  /*
+  *
+   * @Date 下午3:41 2019/4/21
+   * 复杂度：o(n)
+   * beats：90%
+   **/
+  public String decodeString2(String s) {
+    char[] pos=s.toCharArray();
+    Stack<String> stack=new Stack<>();
+    Stack<Integer> numStack=new Stack<>();
+    int i=0;
+    while(i<pos.length){
+      if(pos[i]>='0'&&pos[i]<='9'){
+        int num=0;
+        while(pos[i]>='0'&&pos[i]<='9'){
+          num=num*10+pos[i]-'0';
+          i++;
+        }
+        numStack.push(num);
+      }else if(pos[i]=='['){
+        stack.push("[");
+        i++;
+      }else if(pos[i]==']'){
+        i++;
+        String str="";
+        while(!stack.peek().equals("[")){
+          str=stack.pop()+str;
+        }
+        stack.pop();
+        int len=numStack.pop();
+        String tmp="";
+        for(int j=0;j<len;j++){
+          tmp+=str;
+        }
+        stack.push(tmp);
+      }else{
+        stack.push(pos[i]+"");
+        i++;
+      }
+    }
+    String result="";
+    while(!stack.isEmpty()){
+      result=stack.pop()+result;
+    }
+    return result;
+  }
   public static void main(String[] args) {
     
     System.out.println(decodeString(""));

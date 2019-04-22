@@ -44,7 +44,7 @@ public class NO39CombinationSum {
   /**
    * 
    *2018年7月25日 上午10:54:53
-   * beats:96.56%
+   * beats:99.96%
    * 复杂度：
    */
   private static void dfs1(List<List<Integer>> sum,int[] candidates,List<Integer> result,int left,int pos) {
@@ -52,6 +52,7 @@ public class NO39CombinationSum {
       sum.add(new ArrayList<Integer>(result));
       System.out.println(result);
     }else {
+        //限制 next从pos开始
       while(pos<candidates.length&&left>=candidates[pos]){
           result.add(candidates[pos]);
           dfs1(sum, candidates, result,left-candidates[pos], pos);
@@ -60,12 +61,41 @@ public class NO39CombinationSum {
       }
     }
   }
+
   public static void main(String[] args) {
     int[] candidates={2,3};
     int target=7;
     System.out.println(combinationSum(candidates, target));
     
   }
-  
+
+  /*
+  *
+   * @Date 下午11:50 2019/4/20
+   * 复杂度：o(2^n)
+   * beats：99.96%
+   **/
+  public List<List<Integer>> combinationSum3(int[] candidates, int target) {
+      Arrays.sort(candidates);
+      List<List<Integer>> result=new ArrayList<>();
+      dfs(result,candidates,target,0,0);
+      return result;
+  }
+    List<Integer> tmp=new ArrayList<>();
+    private void dfs(List<List<Integer>> result,int[] candidates,int target,int now,int pos){
+        if(now>=target){
+            if(now==target){
+                result.add(new ArrayList<>(tmp));
+            }
+        }else{
+            //剪枝 限制 起始位置和最终位置
+            for(int i=pos;i<candidates.length;i++){
+                if(now+candidates[i]>target) break;
+                tmp.add(candidates[i]);
+                dfs(result,candidates,target,now+candidates[i],i);
+                tmp.remove(tmp.size()-1);
+            }
+        }
+    }
   
 }

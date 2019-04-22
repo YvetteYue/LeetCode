@@ -36,4 +36,31 @@ public class NO647PalindromicSubstrings {
     }
 
     //TODO 非最优
+
+    private  int sum=0;
+    /*
+    *
+     * @Date 下午3:29 2019/4/20
+     * 复杂度：o(n^2)
+     * beats：100%
+     **/
+    public int countSubstrings3(String s) {
+        char[] chs=s.toCharArray();
+        int len=chs.length;
+        for(int i=0;i<len;i++){
+            extend(chs,len,i,i);
+            extend(chs,len,i,i+1);
+        }
+        return sum;
+    }
+
+    private  void extend(char[] chs,int len,int i,int j){
+        int count=0;
+        while(i>=0&&j<len&&chs[i]==chs[j]){
+            i--;
+            j++;
+            count++;
+        }
+        sum+=count;
+    }
 }

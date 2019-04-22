@@ -46,4 +46,32 @@ public class NO3LongesSubstringWithoutRepeatingCharacters {
         }
         return res;
     }
+
+
+    /*
+    *   hash 前边遇到的字符串位置
+    *   记住初始位置是pre=0
+    *   第一个位置是1
+    *   pre=max{当前遇到相同元素的pre字符串位置，pre} 取最大值
+    *   max=max(max,当前位置-pre（即差不包括当前）)
+     * @Date 上午11:21 2019/4/20
+     * 复杂度：o(n)
+     * beats：99.9%
+     **/
+    public int lengthOfLongestSubstring3(String s) {
+        int pre=0;
+        int max=0;
+        int pos=0;
+        int[] hash=new int[128];
+        for(char ch:s.toCharArray()){
+            pos++;
+            if(hash[ch]!=0){
+                pre=Math.max(hash[ch],pre);
+            }
+            hash[ch]=pos;
+            max=Math.max(max,pos-pre);
+            // System.out.println(pre);
+        }
+        return max;
+    }
 }

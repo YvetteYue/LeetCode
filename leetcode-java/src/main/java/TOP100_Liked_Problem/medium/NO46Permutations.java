@@ -64,7 +64,7 @@ public class NO46Permutations {
     * 2.利用list每次新增追加
      * @Date 下午3:46 2019/1/31
      * 复杂度：
-     * beats：100.00%
+     * beats：99.82%
      **/
     public static List<List<Integer>> permute2(int[] nums) {
         List<List<Integer>> result=new ArrayList<List<Integer>>();

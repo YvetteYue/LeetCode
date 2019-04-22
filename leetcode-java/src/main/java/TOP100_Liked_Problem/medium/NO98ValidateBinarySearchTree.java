@@ -2,6 +2,8 @@ package TOP100_Liked_Problem.medium;
 
 import bean.TreeNode;
 
+import java.util.Stack;
+
 public class NO98ValidateBinarySearchTree {
 
 //    Given a binary tree, determine if it is a valid binary search tree (BST).
@@ -74,4 +76,45 @@ public class NO98ValidateBinarySearchTree {
             isInvalid(root.right);
         }
     }
+
+
+
+    private int pre2=Integer.MIN_VALUE;
+    private boolean flag2=true;
+    /*
+    *   考虑到最小值是Integer.MIN_VALUE
+     * @Date 下午11:20 2019/4/20
+     * 复杂度：
+     * beats：
+     **/
+    public boolean isValidBST2(TreeNode root) {
+        if(root==null) return true;
+        boolean bool=isValidBST(root.left);
+        if(flag){
+            pre=root.val;
+            flag=false;
+        }else if(pre<root.val){
+            pre=root.val;
+        }else return false;
+        boolean bool2=isValidBST(root.right);
+        return bool&&bool2;
+    }
+
+    //先序遍历
+    public boolean isValidBST3(TreeNode root) {
+        Stack<TreeNode> stack=new Stack<>();
+        double inorder=-Double.MAX_VALUE;
+        while(!stack.isEmpty()||root!=null){
+            while(root!=null){
+                stack.push(root);
+                root=root.left;
+            }
+            root=stack.pop();
+            if(root.val<=inorder) return false;
+            inorder=root.val;
+            root=root.right;
+        }
+        return true;
+    }
+
 }
