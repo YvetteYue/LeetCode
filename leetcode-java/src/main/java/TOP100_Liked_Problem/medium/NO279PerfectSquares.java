@@ -1,5 +1,7 @@
 package TOP100_Liked_Problem.medium;
 
+import java.util.Arrays;
+
 public class NO279PerfectSquares {
 
 //    Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
@@ -52,6 +54,7 @@ public class NO279PerfectSquares {
      **/
     public int numSquares2(int n) {
         int nums[] = new int[n+1];
+
         if (n == 1) return 1;
         for (int i = 0; i <= n; i++) {
             int tmp = (int) Math.sqrt(i);
@@ -69,9 +72,33 @@ public class NO279PerfectSquares {
                 nums[i]=nowMin;
             }
         }
+        StringBuilder stringBuilder=new StringBuilder();
         return nums[n];
     }
 
+    /*
+    *
+     * @Date 下午5:31 2019/5/1
+     * 复杂度：47%
+     * beats：
+     **/
+    public int numSquares3(int n) {
+        int[] dp=new int[n+1];
+        Arrays.fill(dp,n);
+        int i1=1;
+        while(i1*i1<=n){
+            dp[i1*i1]=1;
+            i1++;
+        }
+        for(int i=1;i<=n;i++){
+            if(dp[i]!=1){
+                for(int j=1;j*j<=i;j++){
+                    dp[i]=Math.min(dp[i-j*j]+1,dp[i]);
+                }
+            }
+        }
+        return dp[n];
+    }
 
     //TODO https://www.jianshu.com/p/2925f4d7511b  四平方定理
 }

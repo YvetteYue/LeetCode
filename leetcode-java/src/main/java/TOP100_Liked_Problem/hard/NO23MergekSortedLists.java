@@ -73,4 +73,62 @@ public class NO23MergekSortedLists {
     }
 
     //TODO 递归二分等
+
+
+    /*
+    *   堆排序  注意数组中某个链表可能是null，需要特殊判断
+     * @Date 下午10:46 2019/5/3
+     * 复杂度：o(nlgn)
+     * beats：99.87%
+     **/
+    public ListNode mergeKLists3(ListNode[] lists) {
+        ListNode pre=new ListNode(-1);
+        ListNode result=pre;
+        int start=0;
+        int k=0;
+        while(start<lists.length){
+            if(lists[start]!=null){
+                if(start!=k){
+                    lists[k]=lists[start];
+                }
+                start++;
+                k++;
+            }else{
+                start++;
+            }
+        }
+        int len=k;
+        if(len==0) return null;
+        for(int i=len/2-1;i>=0;i--){
+            heapAdjust(lists,len,i);
+        }
+        while(len>0){
+            result.next=lists[0];
+            result=result.next;
+            lists[0]=lists[0].next;
+            if(lists[0]==null){
+                lists[0]=lists[len-1];
+                len--;
+            }
+            if(len<=0)break;
+            heapAdjust(lists,len,0);
+        }
+        return pre.next;
+    }
+
+    private void heapAdjust(ListNode[] lists,int len,int pos){
+        ListNode now=lists[pos];
+        for(int i=pos*2+1;i<len;i=i*2+1){
+            if(i+1<len&&lists[i].val>lists[i+1].val){
+                i++;
+            }
+            if(lists[i].val<now.val){
+                lists[pos]=lists[i];
+                pos=i;
+            }else{
+                break;
+            }
+        }
+        lists[pos]=now;
+    }
 }

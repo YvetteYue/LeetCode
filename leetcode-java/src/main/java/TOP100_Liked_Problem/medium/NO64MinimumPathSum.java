@@ -45,4 +45,28 @@ public class NO64MinimumPathSum {
         }
         return result[MaxX-1][MaxY-1];
     }
+
+
+    /*
+    *   dfs方式计算dp
+     * @Date 下午12:49 2019/5/1
+     * 复杂度：o(n^2)
+     * beats：99.82%
+     **/
+    public int minPathSum1(int[][] grid) {
+        int[][] cache=new int[grid.length][grid[0].length];
+        return dfs(grid,cache,0,0);
+    }
+
+    private int dfs(int[][] grid,int[][] cache,int x,int y){
+        if(x>=grid.length||x<0||y>=grid[0].length||y<0){    //超出界限都是最大值
+            return Integer.MAX_VALUE;
+        }
+        if(x==grid.length-1&&y==grid[0].length-1)return grid[x][y];//在最终节点时才有值
+        if(cache[x][y]!=0) return cache[x][y];
+        int right=dfs(grid,cache,x+1,y);
+        int down=dfs(grid,cache,x,y+1);
+        cache[x][y]=grid[x][y]+Math.min(right,down);
+        return cache[x][y];
+    }
 }

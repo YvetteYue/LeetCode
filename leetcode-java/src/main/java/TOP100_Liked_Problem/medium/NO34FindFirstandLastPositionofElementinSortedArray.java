@@ -49,4 +49,49 @@ public class NO34FindFirstandLastPositionofElementinSortedArray {
         }//出口时，A[lo=hi] 为不大于e的最大元素
         return --lo;
     }
+
+
+    /*
+    *
+     * @Date 下午5:04 2019/5/1
+     * 复杂度：o(lgn)
+     * beats：100%
+     **/
+    public int[] searchRange2(int[] nums, int target) {
+        int pos1=search1(nums,0,nums.length-1,target);
+        int pos2=search2(nums,0,nums.length-1,target);
+        return new int[]{pos1,pos2};
+    }
+
+    //first
+    private int search1(int[] nums,int left,int right,int target){
+        while(left<=right){
+            int mid=left+(right-left)/2;
+            if(nums[mid]>=target){
+                right=mid-1;
+            }else{
+                left=mid+1;
+            }
+        }
+        if(left<nums.length&&left>=0&&nums[left]==target){
+            return left;
+        }
+        return -1;
+    }
+
+    //last
+    private int search2(int[] nums,int left,int right,int target){
+        while(left<=right){
+            int mid=left+(right-left)/2;
+            if(nums[mid]>target){
+                right=mid-1;
+            }else{
+                left=mid+1;
+            }
+        }
+        if(right>=0&&right<nums.length&&nums[right]==target){
+            return right;
+        }
+        return -1;
+    }
 }

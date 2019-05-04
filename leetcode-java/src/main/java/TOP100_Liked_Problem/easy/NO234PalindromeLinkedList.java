@@ -53,4 +53,39 @@ public class NO234PalindromeLinkedList {
 		}
 		return true;
 	}
+
+
+	/*
+	*
+	 * @Date 下午12:23 2019/5/2
+	 * 复杂度：o(n)
+	 * beats：95%
+	 **/
+	public boolean isPalindrome3(ListNode head) {
+		ListNode tmp=head;
+		int count=0;
+		while(tmp!=null){
+			tmp=tmp.next;
+			count++;
+		}
+		ListNode rev=null;
+		ListNode order=head;
+		for(int i=0;i<count/2;i++){
+			ListNode l1=order.next;
+			order.next=rev;
+			rev=order;
+			order=l1;
+		}
+		if(count%2!=0){
+			order=order.next;
+		}
+		while(rev!=null){
+			if(rev.val!=order.val){
+				return false;
+			}
+			rev=rev.next;
+			order=order.next;
+		}
+		return true;
+	}
 }

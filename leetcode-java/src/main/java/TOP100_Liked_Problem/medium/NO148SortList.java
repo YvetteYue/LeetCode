@@ -17,7 +17,7 @@ public class NO148SortList {
         root.next=new ListNode(2);
         root.next.next=new ListNode(1);
         root.next.next.next=new ListNode(3);
-        ListNode result=sortList1(root);
+        ListNode result=new NO148SortList().sortList1(root);
         while(result!=null){
             System.out.println(result.val);
             result=result.next;
@@ -30,7 +30,7 @@ public class NO148SortList {
      * 复杂度：o(n^2)
      * beats：1.88%
      **/
-    public static ListNode sortList1(ListNode head) {
+    public  ListNode sortList1(ListNode head) {
         ListNode sortedList=new ListNode(-1);
         while(head!=null){
             int tmp=head.val;
@@ -64,12 +64,13 @@ public class NO148SortList {
      * 复杂度：o(nlgn)
      * beats：97%
      **/
-    public  ListNode sortList(ListNode head) {
+    public  ListNode sortList2(ListNode head) {
         if(head==null||head.next==null)
             return head;
         ListNode slow=head;
         ListNode fast=head;
         ListNode pre=null;
+        //快慢还可以用于找到中间节点
         while(fast!=null&&fast.next!=null){
             pre=slow;
             slow=slow.next;
@@ -109,6 +110,46 @@ public class NO148SortList {
             }
         }
         return listNode.next;
+    }
+
+
+    //quictsort
+    /*
+    *   快排 左链表插入小于pivot的，中间链表插入与pivot相同的，右链表插入比pivot大的
+     * @Date 下午5:35 2019/5/3
+     * 复杂度：
+     * beats：
+     **/
+    public ListNode sortList(ListNode head) {
+        if(head==null||head.next==null)return head;
+        ListNode node=head.next;
+        ListNode lhead=new ListNode(-1);
+        ListNode rhead=new ListNode(-1);
+        ListNode lcur=lhead,rcur=rhead;
+        ListNode ecur=head;
+        while(node!=null){
+            if(head.val==node.val){
+                ecur.next=node;
+                ecur=ecur.next;
+            }else if(head.val>node.val){
+                lcur.next=node;
+                lcur=lcur.next;
+            }else{
+                rcur.next=node;
+                rcur=rcur.next;
+            }
+            node=node.next;
+        }
+        lcur.next=rcur.next=null;
+        lhead.next=sortList(lhead.next);
+        rhead.next=sortList(rhead.next);
+        ListNode tmp=lhead;
+        while(tmp.next!=null){
+            tmp=tmp.next;
+        }
+        tmp.next=head;
+        ecur.next=rhead.next;
+        return lhead.next;
     }
 }
 

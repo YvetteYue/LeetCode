@@ -81,4 +81,34 @@ public class NO33SearchinRotatedSortedArray {
     }
 
 
+
+    /*
+     *   二分
+     * @Date 下午4:33 2019/5/1
+     * 复杂度：o(lgn)
+     * beats：100%
+     **/
+    public int search3(int[] nums, int target) {
+        int left=0,right=nums.length-1;
+        while(left<=right){ //必须是<=
+            int mid=(left+right)/2;
+            if(nums[mid]==target){
+                return mid;
+            }else if(nums[left]<=nums[mid]){
+                if(nums[left]<=target&&target<nums[mid]){   //左连续
+                    right=mid-1;
+                }else{
+                    left=mid+1;
+                }
+            }else{
+                if(nums[mid]<target&&target<=nums[right]){  //右连续
+                    left=mid+1;
+                }else{
+                    right=mid-1;
+                }
+            }
+        }
+        return -1;
+    }
+
 }
