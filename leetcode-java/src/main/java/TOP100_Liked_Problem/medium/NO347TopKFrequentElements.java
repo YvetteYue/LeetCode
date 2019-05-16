@@ -18,7 +18,7 @@ public class NO347TopKFrequentElements {
 
     public static void main(String[] args) {
         int nums[] = {1, 1, 1, 2, 2, 3};
-        System.out.println(topKFrequent(nums, 2));
+        System.out.println(new NO347TopKFrequentElements().topKFrequent3(nums, 2));
     }
 
     /*
@@ -47,7 +47,62 @@ public class NO347TopKFrequentElements {
         return list;
     }
 
-    //TODO 最优解？ hash+heap???
+
+    /*
+    *   hashmap+heap
+     * @Date 下午10:11 2019/5/5
+     * 复杂度：o(nlgn)
+     * beats：98%
+     **/
+    public List<Integer> topKFrequent3(int[] nums, int k) {
+        List<Integer> list=new ArrayList<>();
+        Map<Integer,Integer> map=new HashMap<>();
+        for(int i:nums){
+            map.put(i,map.getOrDefault(i,0)+1);
+        }
+        HeapEntry[] heap=new HeapEntry[map.size()];
+        int i=0;
+        for(int entry:map.keySet()){
+            heap[i]=new HeapEntry(entry,map.get(entry));
+            i++;
+        }
+        int len=heap.length;
+        for(int j=len/2-1;j>=0;j--){
+            heapAdjust(heap,len,j);
+        }
+        for(int j=0;j<k;j++){
+            list.add(heap[0].key);
+            heap[0]=heap[len-1];
+            len--;
+            heapAdjust(heap,len,0);
+        }
+        return list;
+
+    }
+
+    private void heapAdjust(HeapEntry[] heap,int len,int pos){
+        HeapEntry tmp=heap[pos];
+        for(int i=pos*2+1;i<len;i=i*2+1){
+            if(i+1<len&&heap[i].freq<heap[i+1].freq){
+                i++;
+            }
+            if(heap[i].freq>tmp.freq){
+                heap[pos]=heap[i];
+                pos=i;
+            }else{
+                break;
+            }
+        }
+        heap[pos]=tmp;
+    }
+    class HeapEntry{
+        int key;
+        int freq;
+        HeapEntry(int key,int freq){
+            this.key=key;
+            this.freq=freq;
+        }
+    }
 
 
 }

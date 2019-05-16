@@ -7,6 +7,7 @@ public class test {
         for(int i=0;i<nums.length;i++){
             System.out.println(nums[i]);
         }
+
     }
 
     public static void quicksort(int[] nums,int low,int high){
